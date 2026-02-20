@@ -105,7 +105,8 @@ for ticker, earnings_date in company_earnings_date_dict.items():
         close_on_day = round(hist['Close'].loc[:earnings_date].iloc[-1], 2)
         close_after = round(hist['Close'].loc[earnings_date:].iloc[2], 2) if len(hist['Close'].loc[earnings_date:]) >= 3 else None
         
-        sentiment_score = round((pos_count - neg_count) / (pos_count + neut_count + neg_count), 2)
+        total = pos_count + neut_count + neg_count
+        sentiment_score = round((pos_count - neg_count) / total, 2) if total > 0 else None
 
         summary_table.loc[len(summary_table)] = [
             ticker, 
