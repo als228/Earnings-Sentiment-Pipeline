@@ -12,7 +12,7 @@ from huggingface_hub import login
 load_dotenv()
 
 # --- Configuration ---
-API_KEY_FINNHUB = os.getenv("FINNHUB_API_KEY")
+API_KEY_FINNHUB = os.getenv("API_KEY_FINNHUB")
 API_KEY_HUGGINGFACE_HUB = os.getenv("API_KEY_HUGGINGFACE_HUB")
 FINBERT_MODEL_PATH = "ProsusAI/finbert"
 EARNINGS_LOOKBACK_DAYS = 10
