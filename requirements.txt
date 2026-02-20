@@ -1,0 +1,7 @@
+finnhub-python
+yfinance
+transformers
+pandas
+torch
+streamlit
+huggingface_hub
